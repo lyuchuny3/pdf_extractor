@@ -160,3 +160,13 @@ def get_all_mountain_info(infile_name,outfile_name):
     
     
 get_all_mountain_info("yanshuo_routebook_2010.pdf","yanshuo.xlsx")
+
+# # for debug:
+# # - get page number 
+# doc = fitz.open("a.pdf")
+# read_pages = get_info_page(doc)
+# page_num = 18
+# blocks=doc.load_page(page_num).get_text("blocks")
+# lines = blocks[14][-3].strip().split('\n')
+# height = re.compile('\d{1,3}m').findall(lines[0])
+# print(height[0])
